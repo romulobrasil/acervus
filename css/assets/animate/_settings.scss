@@ -1,0 +1,41 @@
+/////////////////////////////////////////////////////////
+// Animation Default Settings                          //
+/////////////////////////////////////////////////////////
+
+// Base module settings
+$base-duration					: 1s !default;           // used in 1-base module
+$base-origin 					: top center !default;
+$base-degrees 					: 30deg !default;        // used in lightspeed & special modules
+
+$base-timing-function-in		: ease-in !default;
+$base-timing-function-out		: ease-out !default;
+$base-timing-function-in-out	: ease-in-out !default;
+
+$base-distance					: 10px !default; 		 // used in fade, shake and bounce modules
+$base-distance-big				: 1000px !default;       // used in fadeBig and bounce modules
+
+//==================================================================================================//
+// Module loading                                                                                   //
+//==================================================================================================//
+
+// Fade Enter
+$use-fadeIn 			:	false !default;
+$use-fadeInUp 			:	false !default;
+$use-fadeInUpBig 		:	false !default;
+$use-fadeInDown 		:	false !default;
+$use-fadeInDownBig 		:	false !default;
+$use-fadeInLeft 		:	false !default;
+$use-fadeInLeftBig 		:	false !default;
+$use-fadeInRight 		:	false !default;
+$use-fadeInRightBig 	:	false !default;
+
+// Fade Exit
+$use-fadeOut			:   false !default;
+$use-fadeOutUp			:	false !default;
+$use-fadeOutUpBig   	:	false !default;
+$use-fadeOutDown		:	false !default;
+$use-fadeOutDownBig 	:	false !default;
+$use-fadeOutLeft		:	false !default;
+$use-fadeOutLeftBig 	:	false !default;
+$use-fadeOutRight		:	false !default;
+$use-fadeOutRightBig	:	false !default;

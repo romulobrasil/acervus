@@ -1,0 +1,25 @@
+// ANIMATE
+// Import everything to generate your animate sass module //
+
+@import "animate/mixins",
+		"animate/settings";
+
+// FADE
+@import	"animate/fadeIn",
+		"animate/fadeInDown",
+		"animate/fadeInDownBig",
+		"animate/fadeInLeft",
+		"animate/fadeInLeftBig",
+		"animate/fadeInRight",
+		"animate/fadeInRightBig",
+		"animate/fadeInUp",
+		"animate/fadeInUpBig",
+		"animate/fadeOut",
+		"animate/fadeOutDown",
+		"animate/fadeOutDownBig",
+		"animate/fadeOutLeft",
+		"animate/fadeOutLeftBig",
+		"animate/fadeOutRight",
+		"animate/fadeOutRightBig",
+		"animate/fadeOutUp",
+		"animate/fadeOutUpBig";

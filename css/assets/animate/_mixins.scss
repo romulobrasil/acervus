@@ -1,0 +1,31 @@
+//////////////////////////////////////
+// Sass Mixins modulos a ser usados //
+//////////////////////////////////////
+
+@mixin animate-prefixer($property, $value...) {
+    -webkit-#{$property}: unquote('#{$value}');
+    -moz-#{$property}: unquote('#{$value}');
+    -o-#{$property}: unquote('#{$value}');
+    #{$property}: unquote('#{$value}');
+}
+
+///////////////////////////////////
+// Add automaticamente os vendor //
+///////////////////////////////////
+@mixin animate-keyframe($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}

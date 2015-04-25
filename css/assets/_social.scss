@@ -1,0 +1,59 @@
+/* SOCIAL */
+.list-social {
+	width: 74px;
+	height: 39px;
+	margin: 10px auto 20px;
+		
+	li { 
+		float: left; 
+		margin: 0 10px 0 0; 
+		border-radius: 100%;
+		border: 1px solid $white;
+		list-style: none; 
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+    
+    .icon-facebook {
+        @extend %icon-social;
+        @include icon-social('transparent');
+		
+		&:hover {
+			@include color-social(#3b5998);
+		}
+    }
+    
+    .icon-twitter {
+        @extend %icon-social;
+        @include icon-social('transparent');
+		
+		&:hover {
+			@include color-social(#55acee);
+		}
+    }
+    
+    .icon-instagram {
+        @extend %icon-social;
+        @include icon-social('transparent');
+		
+		&:hover {
+			@include color-social(#967157);
+		}
+    }
+    
+    .icon-youtube {
+        @extend %icon-social;
+        @include icon-social('transparent');
+		
+		&:hover {
+			@include color-social(#cc181e);
+		}
+    }
+    
+    .icon-facebook:before   { content: "\e602"; }
+    .icon-twitter:before    { content: "\e604"; }
+    .icon-instagram:before  { content: "\e603"; }
+    .icon-youtube:before    { content: "\e605"; }
+}

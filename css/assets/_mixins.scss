@@ -1,0 +1,72 @@
+// COLOR PLACEHOLDER
+n placeholder($color-placeholder) {
+	input::-webkit-input-placeholder { color: $color-placeholder; }
+	input:-moz-placeholder { color: $color-placeholder; }
+	input::-moz-placeholder { color: $color-placeholder; }
+	input:-ms-input-placeholder { color: $color-placeholder; }
+}
+
+
+// OPACITY
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: alpha(opacity=$opacity-ie);
+}
+
+
+// GRADIENT
+@mixin gradient($first-color, $second-color, $type-gradient) {
+    @if $type-gradient == horizontal {
+        background: $first-color;
+        background: -moz-linear-gradient(left,  $first-color 0%, $second-color 100%);
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,$first-color), color-stop(100%,$second-color));
+        background: -webkit-linear-gradient(left,  $first-color 0%,$second-color 100%);
+        background: -o-linear-gradient(left,  $first-color 0%,$second-color 100%);
+        background: -ms-linear-gradient(left,  $first-color 0%,$second-color 100%);
+        background: linear-gradient(to right,  $first-color 0%,$second-color 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first-color', endColorstr='$second-color',GradientType=1 );
+
+    } @else if $type-gradient == vertical {
+        background: $first-color;
+        background: -moz-linear-gradient(top,  $first-color 0%, $second-color 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$first-color), color-stop(100%,$second-color));
+        background: -webkit-linear-gradient(top,  $first-color 0%,$second-color 100%);
+        background: -o-linear-gradient(top,  $first-color 0%,$second-color 100%);
+        background: -ms-linear-gradient(top,  $first-color 0%,$second-color 100%);
+        background: linear-gradient(to bottom,  $first-color 0%,$second-color 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first-color', endColorstr='$second-color',GradientType=0 );
+        
+    } @else if $type-gradient == diagonal-down {
+        background: $first-color;
+        background: -moz-linear-gradient(-45deg,  $first-color 0%, $second-color 100%);
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$first-color), color-stop(100%,$second-color));
+        background: -webkit-linear-gradient(-45deg,  $first-color 0%,$second-color 100%);
+        background: -o-linear-gradient(-45deg,  $first-color 0%,$second-color 100%);
+        background: -ms-linear-gradient(-45deg,  $first-color 0%,$second-color 100%);
+        background: linear-gradient(135deg,  $first-color 0%,$second-color 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first-color', endColorstr='$second-color',GradientType=1 );
+
+    } @else if $type-gradient == diagonal-up {
+        background: $first-color;
+        background: -moz-linear-gradient(45deg,  $first-color 0%, $second-color 100%);
+        background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,$first-color), color-stop(100%,$second-color));
+        background: -webkit-linear-gradient(45deg,  $first-color 0%,$second-color 100%);
+        background: -o-linear-gradient(45deg,  $first-color 0%,$second-color 100%);
+        background: -ms-linear-gradient(45deg,  $first-color 0%,$second-color 100%);
+        background: linear-gradient(45deg,  $first-color 0%,$second-color 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first-color', endColorstr='$second-color',GradientType=1 );
+
+    } @else if  $type-gradient == radial {
+        background: $first-color;
+        background: -moz-radial-gradient(center, ellipse cover,  $first-color 0%, $second-color 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$first-color), color-stop(100%,$second-color));
+        background: -webkit-radial-gradient(center, ellipse cover,  $first-color 0%,$second-color 100%);
+        background: -o-radial-gradient(center, ellipse cover,  $first-color 0%,$second-color 100%);
+        background: -ms-radial-gradient(center, ellipse cover,  $first-color 0%,$second-color 100%);
+        background: radial-gradient(ellipse at center,  $first-color 0%,$second-color 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first-color', endColorstr='$second-color',GradientType=1 );
+
+    }
+}
