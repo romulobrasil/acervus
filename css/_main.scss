@@ -1,0 +1,23 @@
+/* ASSINATURA MAUNA */
+@font-face {
+	font-family: 'icomoon';
+	src:url('font/icomoon.eot?-a9a63e');
+	src:url('font/icomoon.eot?#iefix-a9a63e') format('embedded-opentype'),
+		url('font/icomoon.woff?-a9a63e') format('woff'),
+		url('font/icomoon.ttf?-a9a63e') format('truetype'),
+		url('font/icomoon.svg?-a9a63e#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* GERAL */
+* { margin: 0; padding: 0; }
+body { font-family: 'Lato', sans-serif; font-weight: 300; font-size: 16px; background-image: url(../img/bg.jpg); }
+nav ul { list-style: none; } 
+ul li { @extend %transition; } 
+a { text-decoration: none; color: #222; cursor: pointer; @extend %transition; }
+input[type="submit"] { @extend %transition; cursor: pointer; font-family: 'Lato', sans-serif; }
+input { font-family: 'Lato', sans-serif; font-weight: 100; }
+.container { width: 960px; margin: 0 auto; position: relative !important; }
+[class^="sprite-"], [class*="sprite-"] { background-image: url(../img/sprite.png); }
+[class^="icon-"], [class*="icon-"] { font-family: 'icomoon'; speak: none; font-style: normal; font-weight: 300; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #b7b7b7; -webkit-transition: all ease-in-out 0.5s; -moz-transition: all ease-in-out 0.5s; transition: all ease-in-out 0.5s; display: block; }

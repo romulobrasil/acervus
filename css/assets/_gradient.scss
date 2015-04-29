@@ -1,5 +1,4 @@
 // GRADIENTE
-
 @mixin gradient($first-color, $second-color, $type-gradient) {
     @if $type-gradient == horizontal {
         background: $first-color;
